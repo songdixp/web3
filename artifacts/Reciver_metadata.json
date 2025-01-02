@@ -1,41 +1,38 @@
 {
 	"compiler": {
-		"version": "0.8.28+commit.7893614a"
+		"version": "0.8.23+commit.f704f362"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					},
-					{
+						"indexed": false,
 						"internalType": "bytes",
 						"name": "data",
 						"type": "bytes"
 					}
 				],
-				"name": "onERC721Received",
-				"outputs": [
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"inputs": [
 					{
-						"internalType": "bytes4",
-						"name": "",
-						"type": "bytes4"
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
 					}
 				],
+				"name": "transfer",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -53,9 +50,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"NFT.sol": "IERC721Receiver"
+			"053FunctionSelector.sol": "Reciver"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -67,12 +64,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"NFT.sol": {
-			"keccak256": "0x15c0134c24eacca75a52afb92e7fa85481565a4090bf0c0645ac4b91866622c9",
+		"053FunctionSelector.sol": {
+			"keccak256": "0xa6ca460343060579e7819b7691e4db000a9e09eb9408c0aeb06dfd952bcd398d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1a118058425b11c8e923233e0440075b296f89e76d7aa1e402d0b789f2f3812e",
-				"dweb:/ipfs/QmSWVUKdp7quRQwsqazpyEhQGP1bCKCtUrXbVymFNhFj9K"
+				"bzz-raw://63bb68272ce90f15b06f11a70ef047b0bebb53d95660264b9faf4abe69317621",
+				"dweb:/ipfs/QmTDw2sRyE6gRkrcDbEmJhGtcd3wNTjFX4wHrqjdQdM7Gv"
 			]
 		}
 	},
