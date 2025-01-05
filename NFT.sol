@@ -115,7 +115,8 @@ contract ERC721 is IERC721 {
                 || spender == _approvals[id]
         );
     }
-
+    // nft721.transferFrom(seller, msg.sender, nftId);
+    // from seller 卖家, to 买家 buyer
     function transferFrom(address from, address to, uint256 id) public {
         require(from == _ownerOf[id], "from != owner");
         require(to != address(0), "transfer to zero address");
@@ -157,15 +158,16 @@ contract ERC721 is IERC721 {
             "unsafe recipient"
         );
     }
-
-    function _mint(address to, uint256 id) internal {
-        require(to != address(0), "mint to zero address");
+    // 参数 (钱包地址 ,NFT的id)
+    function _mint(address addr, uint256 id) internal {
+        // 也就是某一个钱包地址调用了mint，这个钱包的NFT +1 id绑定到这个钱包
+        require(addr != address(0), "mint to zero address");
         require(_ownerOf[id] == address(0), "already minted");
 
-        _balanceOf[to]++;
-        _ownerOf[id] = to;
+        _balanceOf[addr]++; // 钱包的NFT余额数量 +1
+        _ownerOf[id] = addr; //NFTid的地址变成了，调用的钱包地址
 
-        emit Transfer(address(0), to, id);
+        emit Transfer(address(0), addr, id);
     }
 
     function _burn(uint256 id) internal {
@@ -182,8 +184,8 @@ contract ERC721 is IERC721 {
 }
 
 contract MyNFT is ERC721 {
-    function mint(address to, uint256 id) external {
-        _mint(to, id);
+    function mint(address addr, uint256 id) external {
+        _mint(addr, id);// 钱包地址向这个合约铸造一个NFT
     }
 
     function burn(uint256 id) external {
@@ -192,6 +194,9 @@ contract MyNFT is ERC721 {
     }
 }
 
-// 部署MyNFT合约
-// 需要mint一个NFT给 部署的地址，假设：0x5B38Da6a701c568545dCfcB03FcB875f56beddC4，123（nft的id），也就是给123这个nft 赋值 地址，这个地址的nft数量+1
+// from	0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+// to	MyNFT.mint(address,uint256)  0xBE46bA58D315f0d6cD37bd7F313ccBfdC760e891
+// 钱包地址是 5B38，mint(5B38,123) 之后，就会在这个合约地址BE46 铸造一个NFT，
+// 因此，NFT的地址是 BE46 ， 也就是合约地址
 
+// 

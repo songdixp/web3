@@ -8,23 +8,18 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_startingPrice",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_discountRate",
-						"type": "uint256"
-					},
-					{
 						"internalType": "address",
-						"name": "_nftAddr",
+						"name": "_nft",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
 						"name": "_nftId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_startingBid",
 						"type": "uint256"
 					}
 				],
@@ -32,15 +27,66 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Bid",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
 				"inputs": [],
-				"name": "buy",
+				"name": "Start",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "bid",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "discountRate",
+				"name": "endAt",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ended",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBid",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -53,12 +99,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "expiresAt",
+				"name": "hightestBidder",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -66,20 +112,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getPrice",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "nft721",
+				"name": "nft",
 				"outputs": [
 					{
 						"internalType": "contract IERC721",
@@ -108,7 +141,7 @@
 				"name": "seller",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "",
 						"type": "address"
 					}
@@ -118,25 +151,19 @@
 			},
 			{
 				"inputs": [],
-				"name": "startAt",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "start",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "startingPrice",
+				"name": "started",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -156,7 +183,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"054DutchAuction.sol": "DutchAuction"
+			"055EnglishAuction.sol": "EnglishAuction"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -170,12 +197,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"054DutchAuction.sol": {
-			"keccak256": "0x09cc50c959ad193b845a87e0603b940b99dc2e3c5ffbb3335eb604c415382cc0",
+		"055EnglishAuction.sol": {
+			"keccak256": "0xc2b6a72a7dedc358817d5d8c7106e652768709d9e345351a93c667aa8386e5c4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5bc23dbb2df1d289d25d2e13a222627da3fe81750edfb8feb289d00b3e4cb361",
-				"dweb:/ipfs/QmV3EHPSpid47Y6NKxH1uSzoCWmBuJ1juos9VCC6ifgTCx"
+				"bzz-raw://43fb14e72ca9c9d51f156a9b19660aa44109a109f6c930bfb7709a19e00cd755",
+				"dweb:/ipfs/QmZjiYhQYmBbGHBt7opovp7ijDYZV3vQq7zAM8FFRUZdCb"
 			]
 		}
 	},
