@@ -43,7 +43,7 @@ contract EnglishAuction{
     address public hightestBidder;
     uint public highestBid;
     // 8、定义mapping 每一个出价者的出价，因为需要将其他低于最高价的出价者的ETH退换给对应的人
-    mapping (address=> uint ) bidPrices;
+    mapping (address=> uint )public bids;
 
     // 创建构造函数,构造好NFT的地址，拍卖的哪一个具体的NFT的id，起拍价格是多少
     constructor(
@@ -81,7 +81,7 @@ contract EnglishAuction{
         if (hightestBidder !=address(0)){
             // 上一次最高出价者的出价做一个累加，如果上一个竞标者没有竞标成功，可以根据这个累加记录，来进行退还
             // 并且第一次有人出价的话，上一次就是0地址
-            bidPrices[hightestBidder] += highestBid;
+            bids[hightestBidder] += highestBid;
         }
         
         // 更新状态变量
@@ -97,8 +97,8 @@ contract EnglishAuction{
     // 12 如果你的出价被下一个最高价覆盖之后，你就可以把之前咋地额出价取回了，所以要设置取回方法
     function withdraw()external {
         // 即使最高价还是你自己，你仍然可以取回上一次出价
-        uint bal = bidPrices[msg.sender] ; //拿到当前调用者的出价数量,也就是之前记录的累计出价
-        bidPrices[msg.sender] = 0; //拿出来之后就归零，防止漏洞发生
+        uint bal = bids[msg.sender] ; //拿到当前调用者的出价数量,也就是之前记录的累计出价
+        bids[msg.sender] = 0; //拿出来之后就归零，防止漏洞发生
         // 如果不将bidPrices中的值归零，可能会出现重入攻击（Reentrancy Attack）
         // 最后在发送主币，发送到msg.sender地址上
         payable (msg.sender).transfer(bal);

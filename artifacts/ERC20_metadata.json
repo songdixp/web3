@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.28+commit.7893614a"
+		"version": "0.8.23+commit.f704f362"
 	},
 	"language": "Solidity",
 	"output": {
@@ -127,9 +127,9 @@
 				"name": "decimals",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint8",
 						"name": "",
-						"type": "uint256"
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -243,7 +243,7 @@
 		"compilationTarget": {
 			"051ERC20.sol": "ERC20"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -256,11 +256,11 @@
 	},
 	"sources": {
 		"051ERC20.sol": {
-			"keccak256": "0xca4245cf4621491609f32f10b2d191e4a5df152d4f1beb9cec85f00f67c23a34",
+			"keccak256": "0x962637892e88f9d29b1e5ef934a7d4597dff824a4d3b234315e795d4788176b8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://68cce807db5167ad9abdc125aa166841a67375a3883e0a3da3b3e59c12063ff4",
-				"dweb:/ipfs/QmNvCFZx4ZKXkxqcE6dJkiCPEzQ71CHQMwnvmwbEeWabZ1"
+				"bzz-raw://0961152c45deb821555251091d8dd8226b10b6e0bb869981077726e8b2d0a342",
+				"dweb:/ipfs/QmSDD1sUn64uEfzVwAnkv4g9dkxedz9dR8UdLUoguoKkYn"
 			]
 		}
 	},

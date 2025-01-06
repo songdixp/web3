@@ -97,6 +97,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "bids",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "end",
 				"outputs": [],
@@ -250,11 +269,11 @@
 	},
 	"sources": {
 		"055EnglishAuction.sol": {
-			"keccak256": "0x37e0cb5621a4fc306ca86f756a96d953d1e8e9afeae09bc8c3e92581509b802b",
+			"keccak256": "0x0436bf2b3a29d150a9e53a175af9d347edc234d276d27644572bb0dedfab818e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://227b92c254b6de28c5b465a92830ffbbd647be501249b3cd0cff8b24c22645a9",
-				"dweb:/ipfs/QmPcp8Tdmsshe7nYK3kHgdWNg46vBDhqUE5Z27eAy13z4s"
+				"bzz-raw://3c56f034c54d83b8c439149529e6c7235308f05e7d95f64f1c2a3cf8abb479b9",
+				"dweb:/ipfs/QmYQ2RUiPa1PXcFRJf499qpj28jD9uLVy32UYRQ34cxYDm"
 			]
 		}
 	},
