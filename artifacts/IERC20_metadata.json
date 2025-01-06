@@ -167,11 +167,11 @@
 	},
 	"sources": {
 		"051ERC20.sol": {
-			"keccak256": "0x962637892e88f9d29b1e5ef934a7d4597dff824a4d3b234315e795d4788176b8",
+			"keccak256": "0xb67b761777c15f20e5e122901d73e12f2c9fef4c4bff226bc657ea213d7bb876",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0961152c45deb821555251091d8dd8226b10b6e0bb869981077726e8b2d0a342",
-				"dweb:/ipfs/QmSDD1sUn64uEfzVwAnkv4g9dkxedz9dR8UdLUoguoKkYn"
+				"bzz-raw://77aec9cc7f219b18e6dd4795c8b23a782b50cc45cf9a4de8799f1f8ba8d22e3b",
+				"dweb:/ipfs/QmVDwesqYobfy6vT9h43WpsU6WAnJhkbMkxdDJr6ohHpKR"
 			]
 		}
 	},
