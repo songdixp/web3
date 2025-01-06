@@ -47,8 +47,46 @@
 			},
 			{
 				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "hightestBidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "highestBid",
+						"type": "uint256"
+					}
+				],
+				"name": "End",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
 				"inputs": [],
 				"name": "Start",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdraw",
 				"type": "event"
 			},
 			{
@@ -56,6 +94,13 @@
 				"name": "bid",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "end",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -168,6 +213,13 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -198,11 +250,11 @@
 	},
 	"sources": {
 		"055EnglishAuction.sol": {
-			"keccak256": "0xc2b6a72a7dedc358817d5d8c7106e652768709d9e345351a93c667aa8386e5c4",
+			"keccak256": "0x37e0cb5621a4fc306ca86f756a96d953d1e8e9afeae09bc8c3e92581509b802b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://43fb14e72ca9c9d51f156a9b19660aa44109a109f6c930bfb7709a19e00cd755",
-				"dweb:/ipfs/QmZjiYhQYmBbGHBt7opovp7ijDYZV3vQq7zAM8FFRUZdCb"
+				"bzz-raw://227b92c254b6de28c5b465a92830ffbbd647be501249b3cd0cff8b24c22645a9",
+				"dweb:/ipfs/QmPcp8Tdmsshe7nYK3kHgdWNg46vBDhqUE5Z27eAy13z4s"
 			]
 		}
 	},

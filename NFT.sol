@@ -185,7 +185,7 @@ contract ERC721 is IERC721 {
 
 contract MyNFT is ERC721 {
     function mint(address addr, uint256 id) external {
-        _mint(addr, id);// 钱包地址向这个合约铸造一个NFT
+        _mint(addr, id); // 钱包地址调用这个方法，意味着这个钱包地址的NFT数量+1，并且NFT的id记录到这个钱包地址上
     }
 
     function burn(uint256 id) external {
