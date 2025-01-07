@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.28+commit.7893614a"
+		"version": "0.8.23+commit.f704f362"
 	},
 	"language": "Solidity",
 	"output": {
@@ -84,12 +84,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "spender",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "tokenId",
 						"type": "uint256"
 					}
 				],
@@ -110,7 +110,7 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "balance",
 						"type": "uint256"
 					}
 				],
@@ -121,7 +121,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "tokenId",
 						"type": "uint256"
 					}
 				],
@@ -129,7 +129,7 @@
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "operator",
 						"type": "address"
 					}
 				],
@@ -164,7 +164,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "tokenId",
 						"type": "uint256"
 					}
 				],
@@ -193,7 +193,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "tokenId",
 						"type": "uint256"
 					}
 				],
@@ -216,7 +216,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "tokenId",
 						"type": "uint256"
 					},
 					{
@@ -239,7 +239,7 @@
 					},
 					{
 						"internalType": "bool",
-						"name": "approved",
+						"name": "_approved",
 						"type": "bool"
 					}
 				],
@@ -252,7 +252,7 @@
 				"inputs": [
 					{
 						"internalType": "bytes4",
-						"name": "interfaceId",
+						"name": "interfaceID",
 						"type": "bytes4"
 					}
 				],
@@ -281,7 +281,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "tokenId",
 						"type": "uint256"
 					}
 				],
@@ -304,9 +304,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"NFT.sol": "ERC721"
+			"071ERC721.sol": "ERC721"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -318,12 +318,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"NFT.sol": {
-			"keccak256": "0x9ad136d3d78cf239e7944e1c9bd96f038425afb7c53baecb1fd8d81f625e6fae",
+		"071ERC721.sol": {
+			"keccak256": "0x96fb86a54c9aaff2dd87aaaa87f582c1d9b2665188b82b14f9e0acaff694916f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e90bced55683271391657810e7535559737e0501ccf7f3e4622124190a44b811",
-				"dweb:/ipfs/QmVvqgBUBVWtFVQK2ePMMgXciooBmvW1HCqyXhVh6t34dV"
+				"bzz-raw://b354328ab2dcda416d04a3e5069dde5f7a856d15c99761779bddbf5cbe7bf7ef",
+				"dweb:/ipfs/QmU3XhYWJNfGhBnERRCnkznyR2Wr8LdU5bWRxWPkbFoHep"
 			]
 		}
 	},

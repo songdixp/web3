@@ -8,17 +8,22 @@
 			{
 				"inputs": [
 					{
-						"internalType": "bytes4",
-						"name": "interfaceID",
-						"type": "bytes4"
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
 					}
 				],
-				"name": "supportsInterface",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "address",
 						"name": "",
-						"type": "bool"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -38,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"071ERC721.sol": "IERC165"
+			"058Create2.sol": "DeployWithCreate2"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -52,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"071ERC721.sol": {
-			"keccak256": "0x96fb86a54c9aaff2dd87aaaa87f582c1d9b2665188b82b14f9e0acaff694916f",
+		"058Create2.sol": {
+			"keccak256": "0xe9e14de61354dc3a1b6c6915d6b580db52d2daf72dbc77add53e0e6cbc238a4c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b354328ab2dcda416d04a3e5069dde5f7a856d15c99761779bddbf5cbe7bf7ef",
-				"dweb:/ipfs/QmU3XhYWJNfGhBnERRCnkznyR2Wr8LdU5bWRxWPkbFoHep"
+				"bzz-raw://5760a6adb506afceccba4392793863f0850739ef2b898a743dd392a4596c770e",
+				"dweb:/ipfs/QmUXwoRFHuAk3tBoyLKWCDb8NYBDeQV6oS8qeN1PPHF82a"
 			]
 		}
 	},

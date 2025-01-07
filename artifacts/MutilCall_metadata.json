@@ -8,17 +8,22 @@
 			{
 				"inputs": [
 					{
-						"internalType": "bytes4",
-						"name": "interfaceID",
-						"type": "bytes4"
+						"internalType": "address[]",
+						"name": "targets",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bytes[]",
+						"name": "data",
+						"type": "bytes[]"
 					}
 				],
-				"name": "supportsInterface",
+				"name": "mutilCall",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "bytes[]",
 						"name": "",
-						"type": "bool"
+						"type": "bytes[]"
 					}
 				],
 				"stateMutability": "view",
@@ -38,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"071ERC721.sol": "IERC165"
+			"059MutilCall.sol": "MutilCall"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -52,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"071ERC721.sol": {
-			"keccak256": "0x96fb86a54c9aaff2dd87aaaa87f582c1d9b2665188b82b14f9e0acaff694916f",
+		"059MutilCall.sol": {
+			"keccak256": "0xe8a428135e2b65c90c49b29ddd138c3ca3b96e4b9ae0a097c3f0a3147e239603",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b354328ab2dcda416d04a3e5069dde5f7a856d15c99761779bddbf5cbe7bf7ef",
-				"dweb:/ipfs/QmU3XhYWJNfGhBnERRCnkznyR2Wr8LdU5bWRxWPkbFoHep"
+				"bzz-raw://379b3c52d026ab329f93047209ee6f605c647abb7bdeb3f867a1a308373d86ad",
+				"dweb:/ipfs/QmZZfxRa3ABwFX6WjWWSJ2GegnXWSQpcAbYL3kR5A6TJd7"
 			]
 		}
 	},

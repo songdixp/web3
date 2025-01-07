@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.23+commit.f704f362"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -154,7 +154,7 @@
 		"compilationTarget": {
 			"051ERC20.sol": "IERC20"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -167,11 +167,11 @@
 	},
 	"sources": {
 		"051ERC20.sol": {
-			"keccak256": "0xb67b761777c15f20e5e122901d73e12f2c9fef4c4bff226bc657ea213d7bb876",
+			"keccak256": "0xd6e7d71ec23e1c3567403aefe0c3b167da7af1f7240ccc36f58be51ebcaf9d9a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://77aec9cc7f219b18e6dd4795c8b23a782b50cc45cf9a4de8799f1f8ba8d22e3b",
-				"dweb:/ipfs/QmVDwesqYobfy6vT9h43WpsU6WAnJhkbMkxdDJr6ohHpKR"
+				"bzz-raw://6d6d2d304a914fecc5d15a8323f782ef00e4c0f7a9b120ca50c562c483bb1338",
+				"dweb:/ipfs/QmZfxwndhtw8cRizPWZZeCNdmKU9xDVh3MQGDrxn9VWsDY"
 			]
 		}
 	},

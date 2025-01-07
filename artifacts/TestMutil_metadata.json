@@ -6,37 +6,39 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
+				"inputs": [],
+				"name": "func1",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "",
 						"type": "uint256"
 					},
 					{
-						"internalType": "bytes",
-						"name": "data",
-						"type": "bytes"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"name": "onERC721Received",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "func2",
 				"outputs": [
 					{
-						"internalType": "bytes4",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bytes4"
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -53,7 +55,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"071ERC721.sol": "IERC721Receiver"
+			"059MutilCall.sol": "TestMutil"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -67,12 +69,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"071ERC721.sol": {
-			"keccak256": "0x96fb86a54c9aaff2dd87aaaa87f582c1d9b2665188b82b14f9e0acaff694916f",
+		"059MutilCall.sol": {
+			"keccak256": "0xe52722feb6170d5241a4308b130d975ec071c3506a20bdcc89e961473521230f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b354328ab2dcda416d04a3e5069dde5f7a856d15c99761779bddbf5cbe7bf7ef",
-				"dweb:/ipfs/QmU3XhYWJNfGhBnERRCnkznyR2Wr8LdU5bWRxWPkbFoHep"
+				"bzz-raw://f61ba407fb658ed0cda179f7754e8ac5fd46ac64b14e4ea18683afa3e7ccf4f2",
+				"dweb:/ipfs/QmWvvcDJNiQuk3XQfWEhLkgEWSGDKqCCK7DiGEvadjTery"
 			]
 		}
 	},
