@@ -6,53 +6,27 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"name": "DelegateCallFailed",
+				"type": "error"
+			},
+			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "x",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "y",
-						"type": "uint256"
+						"internalType": "bytes[]",
+						"name": "data",
+						"type": "bytes[]"
 					}
 				],
-				"name": "getFunc1Data",
+				"name": "multiDelegatecall",
 				"outputs": [
 					{
-						"internalType": "bytes",
-						"name": "data",
-						"type": "bytes"
+						"internalType": "bytes[]",
+						"name": "results",
+						"type": "bytes[]"
 					}
 				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getFunc2Data",
-				"outputs": [
-					{
-						"internalType": "bytes",
-						"name": "data",
-						"type": "bytes"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getMintData",
-				"outputs": [
-					{
-						"internalType": "bytes",
-						"name": "data",
-						"type": "bytes"
-					}
-				],
-				"stateMutability": "pure",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -69,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"060MultiDelegatecall.sol": "Helper"
+			"060MultiDelegatecall.sol": "MultiDelegateCall"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
