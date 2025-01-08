@@ -84,11 +84,11 @@
 	},
 	"sources": {
 		"060MultiDelegatecall.sol": {
-			"keccak256": "0xadc0a0f582a181c34adf6152301c4bddb12b50ed82f3a73c95469f9a428a3cad",
+			"keccak256": "0x11408ab6fa25151134d0a2c5512c3256bcf19a5d8c5f6685df1c6d3c0837aa41",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0f8b315bcfc14269a85912fb1396436c21281bdb181607a37324b31020d5f368",
-				"dweb:/ipfs/QmNQBSW62z64oB524ZmDYMmpc3Xd5979EvUo745LBpMZ6a"
+				"bzz-raw://b92d29c6924f4f4b14cfa114f218801ab595903ca0ba013d8fbafa906c272ad0",
+				"dweb:/ipfs/Qma8VqEEv9qnTdY2ye8mMD1WwLpe9GT2d7Fc9CvwdwcxAk"
 			]
 		}
 	},

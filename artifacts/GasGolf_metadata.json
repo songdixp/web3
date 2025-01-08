@@ -6,27 +6,29 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "DelegateCallFailed",
-				"type": "error"
-			},
-			{
 				"inputs": [
 					{
-						"internalType": "bytes[]",
-						"name": "data",
-						"type": "bytes[]"
+						"internalType": "uint256[]",
+						"name": "nums",
+						"type": "uint256[]"
 					}
 				],
-				"name": "multiDelegatecall",
+				"name": "sumIfEvenAdnLessThan99",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "total",
 				"outputs": [
 					{
-						"internalType": "bytes[]",
-						"name": "results",
-						"type": "bytes[]"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "payable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -43,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"060MultiDelegatecall.sol": "MultiDelegateCall"
+			"062GasGolf.sol": "GasGolf"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -57,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"060MultiDelegatecall.sol": {
-			"keccak256": "0x11408ab6fa25151134d0a2c5512c3256bcf19a5d8c5f6685df1c6d3c0837aa41",
+		"062GasGolf.sol": {
+			"keccak256": "0x5be8f02d6cb6beae3ae998ccd0e9e10052f80ae8b069d43ff258f5024a52e0f5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b92d29c6924f4f4b14cfa114f218801ab595903ca0ba013d8fbafa906c272ad0",
-				"dweb:/ipfs/Qma8VqEEv9qnTdY2ye8mMD1WwLpe9GT2d7Fc9CvwdwcxAk"
+				"bzz-raw://4d03ddb1153070eca9d43c22ec529126eaad2142202c784eaa3a97544e7617fd",
+				"dweb:/ipfs/QmaW6bjgQMvdxhcs2mMDWZJAFuJ1w8fMfCyk6dRwz4KaDd"
 			]
 		}
 	},
