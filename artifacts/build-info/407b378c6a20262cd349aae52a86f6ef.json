@@ -1,0 +1,68 @@
+{
+	"id": "407b378c6a20262cd349aae52a86f6ef",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"065CSAMM.sol": {
+				"content": "\n// SPDX-License-Identifier: MIT\npragma solidity 0.8.23;\n\n\n/*\nconstant sum market maker：恒定总和做市商。\n关于什么是恒定总和，没有找到很精准的说明，大概是保持几种资产的储备数量总和恒定的意思。\n比如要求它屯的股票a+股票b=常数k\n\n做市商（market maker）制度，在香港又叫庄家制度。由特定的金融机构或个人（即“做市商”）在证券交易市场中，通过向双边报价（买入价和卖出价）持续参与交易，为市场提供流动性和稳定性。\n做市商可以理解为就是个股票超市，屯股票，卖股票，会赚差价，也会担风险。下面是一个详细运作过程的例子。\n\n背景\n市场：XYZ 股票交易市场\n证券：XYZ 公司股票\n做市商：做市商 A，负责为 XYZ 股票提供流动性。\n投资者：B、C，分别为市场中的买家和卖家。\n\n做市商的初始报价：\n做市商 A 提供双边报价（买入价和卖出价），例如：\n\n买入价（Bid）：99 元/股\n卖出价（Ask）：101 元/股\n买卖价差：2 元\n做市商承诺：\n无论市场是否有买家或卖家，他都愿意以买入价买入股票，以卖出价卖出股票。\n初始库存：做市商持有 1000 股 XYZ 股票\n\n场景 1：投资者 B 想卖出股票\n投资者 B 想卖出 200 股 XYZ 股票。\nB 可以选择与做市商的买入价（99 元）成交。\n交易过程：\n做市商 A 以 99 元/股的价格买入 B 的 200 股。\n结果：\n做市商 A：持有股票增加到 1200 股。\n投资者 B：收到 19800 元（200 股 × 99 元）。\n做市商的库存增加后，他可能会调整报价以降低买入股票的风险，例如：\n\n新的买入价：98 元/股\n新的卖出价：100 元/股\n\n场景 2：投资者 C 想买入股票\n投资者 C 想买入 150 股 XYZ 股票。\nC 可以选择与做市商的卖出价（100 元）成交。\n交易过程：\n做市商 A 以 100 元/股的价格卖出 150 股给 C。\n结果：\n做市商 A：持有股票减少到 1050 股。\n投资者 C：支付 15000 元（150 股 × 100 元），获得股票。\n做市商的库存减少后，他可能会再次调整报价以吸引更多卖家，例如：\n\n新的买入价：99 元/股\n新的卖出价：101 元/股\n\n1.\u0001主要功能介绍\u0001\n•\n交换（Swap）：允许⽤⼾交换⼀个代币为另⼀个代币。\u0001\n•\n添加流动性（Add\u0001Liquidity）：⽤⼾可以添加代币到池⼦中。\u0001\n•\n移除流动性（Remove\u0001Liquidity）：⽤⼾可以从池⼦中移除代币。\u0001\n\n2.\u0001状态变量和构造函数\u0001\n•\nERC20\u0001代币：定义两个不可变的ERC20代币（token0\u0001和\u0001token1）。\u0001\n•\n储备量（Reserves）：跟踪合约中锁定的每种代币的数量。\u0001\n•\n总份额和⽤⼾份额：跟踪总份额和各个⽤⼾的份额。\n•\n构造函数：初始化代币地址和状态变量。\n3.\u0001核⼼函数实现\u0001\n•\n交换逻辑：确保输⼊代币有效，计算输出代币数量，更新储备量，最后将代币转移给⽤⼾。\n•\n添加和移除流动性：计算⽤⼾应得的份额，更新储备量，根据份额转移相应的代币。\n4.\u0001代码优化\u0001\n•\n重构：优化交换函数，以减少冗余代码和提⾼\u0001gas\u0001效率。\u0001\n5.\u0001部署和测试\u0001\n•\n部署：演⽰如何部署ERC20代币和AMM合约。\u0001\n•\n功能测试：通过实际交互演⽰添加流动性、交换和移除流动性的过程。\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"065CSAMM.sol": {
+				"ast": {
+					"absolutePath": "065CSAMM.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.8",
+								".23"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						}
+					],
+					"src": "33:3353:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

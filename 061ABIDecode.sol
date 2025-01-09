@@ -45,7 +45,7 @@ contract AbiCode{
 ["Solidity", [1,2]] 注意定长数组
 将编码之后的机器码，放到decode解码里面编译解析，就能顺里的解开编码格式
 注意，结构体，元祖类型
-3:tuple(string,uint256[2]): myStruct Solidity,1,2
+3:tuple(string,uint256[2]): myStruct Solidity,1,2  元组类型是什么
 这里我们输入的字符串在remix里面无法显示，但是你可以使用web3 或者ethers将结果返回出来
 */ 
 
