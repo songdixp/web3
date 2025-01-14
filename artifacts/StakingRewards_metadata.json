@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.23+commit.f704f362"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -88,13 +88,7 @@
 			{
 				"inputs": [],
 				"name": "getReward",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -334,7 +328,7 @@
 		"compilationTarget": {
 			"072StakingRewords.sol": "StakingRewards"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -347,11 +341,11 @@
 	},
 	"sources": {
 		"072StakingRewords.sol": {
-			"keccak256": "0x2d39c9437b7c28873daf10535b31a8019738c84c814c6f31be653f67ba50c32f",
+			"keccak256": "0x0c4e121ab6439cdb35a70a2a2982e03c85850ea80bc3f8e0148560b21ba32bfd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://96c9a2423d66627ba8a3ec7890ef6256332a6218e54e36da1c85eab8f2054f59",
-				"dweb:/ipfs/QmUkGHwnezAAFGnh8cVsgRfTJhDtfJf9s4stfKhE1r1tD3"
+				"bzz-raw://2240598d27b47b8cbd39be5438d0646501b7999869ff899de458f41ba2d1b3f2",
+				"dweb:/ipfs/QmU9J2npAcMQ5r15SNc69FSTE8PdHNKUyaDKB8Jh19PMmR"
 			]
 		},
 		"@openzeppelin/contracts/interfaces/IERC20.sol": {

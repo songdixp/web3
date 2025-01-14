@@ -1,6 +1,6 @@
 
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.23;
+pragma solidity ^0.8.24;
 
 
 // 质押奖励
@@ -9,7 +9,7 @@ pragma solidity 0.8.23;
 1. 基础概念：理解智能合约、IERC20接⼝和Solidity语⾔的基本⽤法，如何导⼊IERC20接⼝，以及定义不可变的智能合约状态变量。
 2. 状态变量的定义：
 - 掌握如何设置staking token（抵押代币）和rewards token（奖励代币）。 
-- 学习如何跟踪奖励的持续时间、结束时间、更新时间以及奖励率。
+- 学习如何跟踪奖励的持续时间、结束时间、更新时间w以及奖励率。
 3. 智能合约功能：
 - 实现构造函数以初始化合约所有者、抵押代币和奖励代币的地址。
 - 编写函数允许⽤⼾抵押代币、提取代币和领取奖励。
@@ -67,7 +67,7 @@ contract StakingRewards{
     }
 
     // 追踪 每秒每token奖励金额， 用户每 token花费的奖励金额，且 在质押/取出的时候调用更新数据
-    modifier updateReword(address _account){
+    modifier updateReward(address _account){
         rewardPerTokenStored = rewardPerToken();
         updateAt = lastTimeRewardApplicable(); //返回当前时间戳 | 奖励结束的时间
 
@@ -87,7 +87,8 @@ contract StakingRewards{
     }
 
     // owner 设置奖励金额的时候 就能通过时长计算出我们的rate
-    function notifyRewardAmout(uint _amount)external onlyOwner {
+    function notifyRewardAmout(uint _amount)external onlyOwner updateReward(address(0)){
+        // 没看明白为什么需要更新奖励 ??? updateReward, 既然传入了address0 就只更新 时间和rewardPerTokenStored
         // 奖励还没有开始，或者上一个周期已经结束
         if (block.timestamp > finishedAt) {
             rewardRate = _amount / duration;
@@ -106,7 +107,7 @@ contract StakingRewards{
     }
 
     // 质押自己的ETH
-    function stake(uint _amount)external {
+    function stake(uint _amount)external updateReward(msg.sender){
         require(_amount> 0,"amount <0");
         stakingToken.transferFrom(msg.sender, address(this), _amount);
         balanceOf[msg.sender] += _amount; // 用户质押的金额
@@ -116,7 +117,7 @@ contract StakingRewards{
     // 很多地方都需要，需要编写装饰器追踪每一笔 stake和 withdraw对变量的影响，这样就可以重用代码
 
     // 取出质押的ETH
-    function withdraw(uint _amount)external {
+    function withdraw(uint _amount)external updateReward(msg.sender){
         require(_amount> 0, "amount <0");
         balanceOf[msg.sender] -= _amount;
         totalSupply -= _amount;
@@ -149,14 +150,18 @@ contract StakingRewards{
     // 查看用户奖励金额是多少
     function earned(address _account) public view  returns(uint amount){
         // 用户账户剩余token数量 * 每token奖励金额 + 用户奖励 = 用户的奖励金额
-        amount = balanceOf[_account] * (
-            (rewardPerToken() - userRewardPerTokenPaid[_account]) / 1e18
-        ) + userRewards[_account];
-
+        amount = ( 
+            balanceOf[_account] * (rewardPerToken() - userRewardPerTokenPaid[_account])
+            ) / 1e18 + userRewards[_account];
     }
 
     // 获取奖励
-    function getReward() external returns (uint){
+    function getReward() external updateReward(msg.sender){
+        uint reward = userRewards[msg.sender];
+        if (reward > 0){
+            userRewards[msg.sender] = 0;
+            rewardsToken.transfer(msg.sender, reward);
+        }
 
     }
 
