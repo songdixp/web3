@@ -171,14 +171,38 @@ contract StakingRewards{
     function _min(uint x, uint y) private pure returns (uint) {
         return x <= y ? x : y ;
     }
-
-
-
-
-
-
-
 }
+
+
+/*
+部署测试
+1 部署两个ERC20 token 代币合约
+2 填写两个ERC20 合约的地址，给StakingRewords 进行部署
+3 设置duration ，1000
+4 调用 notifyRewardAmout 设置奖励速率，设置前需要确认我们的奖励token已经打到我们的合约里面了
+ 4.1 在rewardstoken里面进行 mint 给 stakingrewards合约，复制stakingrewards合约地址
+ 在 rewardstoken 合约中的 mint 方法，地址输入 stakingrewards地址 和 数量amount ： 1000，000000000000000000 1000 +18个0，奖励token就mint给了 Rstakingewards合约了
+ 4.2 调用 notifyewardsAmount 设置奖励金额 
+ 
+5 质押token
+    5.1 切换第二个账户，作为质押账户
+    获取质押token， 首先在 stakingtoken合约中mint 质押账户的铸币，复制用户地址，在质押合约中进行 mint，数额一样1000ETH
+    5.2 将token，质押到 stakingrewards合约中来
+    5.3 在质押ERC20合约中 approve stakingrewards合约
+    5.4 质押 stake，在stakingrewards ，成功后检查数据
+
+6 检查奖励数据
+    6.1看下质押的数量是否正确，复制质押用户的地址，balanceof
+    6.2 查看奖励金额是多少，uint256: amount 133536000000000000000
+    6.3 提取奖励 getRewards ，检查earned 方法的金额是否从0开始  1，712，000，000，000，000，000  ？？？ 这里为什么是1712
+    6.4 在奖励TOken合约中，检查是否已经收到了奖励，调用balanceOf 地址为质押用户的地址  
+        0:uint256: 448544000000000000000
+7 提取出来 withdraw 提取质押的token代币
+    7.1 调用withdraw，调用balanceof 地址为质押用户地址，发现为0 ，？？？ 提取出来之后，货币去哪里了？是钱包里面吗？
+
+
+*/ 
+
 
 
 

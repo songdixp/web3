@@ -80,17 +80,17 @@ contract ERC20 is IERC20{
 
     // 还需要考虑一个问题，部署合约之后没有任何人的账户中有余额，因此就要想办法给账户增加余额
     // 通常情况下，ERC20 在部署的时候通过构造函数，把指定的数量余额赋值给当前合约的部署者，为了简单的演示，就编写铸币方法
-    function mint(uint amount)external {
+    function mint(address to, uint amount)external   {
         // 给一个账户增加余额
         // 通常铸币方法要有权限的控制，但是为了演示方便，我们降低难度，就不增加权限控制功能了
-        balanceOf[msg.sender] += amount;
+        balanceOf[to] += amount;
         totalSupply += amount; // 合约持有的token总量也要发生变化
         // 当在区块链浏览器上看到0地址发出来的token，不是从黑洞中发出来的，而是铸币事件
-        emit Transfer(address(0), msg.sender, amount);
+        emit Transfer(address(0), to, amount);
     }
 
     // 还需要销毁方法
-    function burn(uint amount) external {
+    function burn(uint amount) external  {
         balanceOf[msg.sender] -= amount;
         totalSupply -= amount;
         emit Transfer(msg.sender, address(0), amount);
@@ -98,4 +98,5 @@ contract ERC20 is IERC20{
     }
     
 }
+
 

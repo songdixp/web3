@@ -272,7 +272,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"051ERC20.sol": "ERC20"
+			"051ERC20.sol": "MyToken"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -287,11 +287,11 @@
 	},
 	"sources": {
 		"051ERC20.sol": {
-			"keccak256": "0xbece909a874cefc71f3d7c0f3bf421ac2c39e595887ff0ce8290b6b034b6a7b6",
+			"keccak256": "0xe7628233b22391ec1af7a57fbfed37fe07b5d82d56b7492fc12c3e5e7a88ee41",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e453e8a982996cc9c89902f05280882f53e64f78b86ed232b7f6988ebd51c28f",
-				"dweb:/ipfs/QmNxbjpJ999mxCUdUkDF5SLnwChxL1MudD8x2ayEvAEpdk"
+				"bzz-raw://2a152da26826acb1ee321f2ab9d467450680075fa893d143430135f7e3a7d2ea",
+				"dweb:/ipfs/QmW7VkVqqsZEF7h8GCgLF2kLkwnNghHpiTQzsZTaQiuu6T"
 			]
 		}
 	},
