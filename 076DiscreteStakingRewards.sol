@@ -19,6 +19,7 @@ interface IERC20 {
 
 
 contract Discrete
+{}
 
 
 

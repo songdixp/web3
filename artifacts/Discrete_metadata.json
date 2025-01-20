@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"076DiscreteStakingRewards.sol": "Discrete"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"076DiscreteStakingRewards.sol": {
+			"keccak256": "0x66980e925f2cfbddc51a1e3a9ef9ceedfb3da97768513f9525279c68c3ceaeaf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b1e885f6bceee16e140643b6b2e252a0c1d9b3af9489082e8195637cb2456d71",
+				"dweb:/ipfs/QmX3cp66ZuF2UAwJm9ojuhHhpsbq686VitcrkyrE4bbBUS"
+			]
+		}
+	},
+	"version": 1
+}
