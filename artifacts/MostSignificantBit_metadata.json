@@ -4,7 +4,27 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "findMostSignificantBit",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "r",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +53,11 @@
 	},
 	"sources": {
 		"074MostSignificantBit.sol": {
-			"keccak256": "0x936fbda2263d34c93a7b2630aea23f498e822cd00c253efe4d1e3b339700db4d",
+			"keccak256": "0xdf58efdb8f591d4f10a8143c053e17644a74a3d262b7ff592dc216cca954daf8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bae9d47074ab8a92d09d0490d70a637fd346667db08411137b77de2cc15178a2",
-				"dweb:/ipfs/QmW4CtemCSdiUikdP42nRU6doQVhts78Ru1ikDuTULNk8g"
+				"bzz-raw://226c829f26894862d5b0e3b3dede2d3afd00cd61eab48d71cd746a74834a9d06",
+				"dweb:/ipfs/Qmb5EXetaeAtWqP33KPS4cgQSVBtLzNj46TEZaT9x7U9Vt"
 			]
 		}
 	},

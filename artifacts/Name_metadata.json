@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"055EnglishAuction.sol": "Name"
+			"076DiscreteStakingRewards.sol": "Name"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"055EnglishAuction.sol": {
-			"keccak256": "0xe693c3eff55798ee67305ff9c3ce4edca44fb131edf55b9c204c145729a75adf",
+		"076DiscreteStakingRewards.sol": {
+			"keccak256": "0x6a1d41e89870b5ef797548a72e98d200454c1f7b66e10bbdf9f76c0d2fc4796f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d769f07936e60601991a8684392287d7763a101775c909fecf655a9a3049d2b0",
-				"dweb:/ipfs/QmcnakjfMgtmBjmDs5gaPfY3dWM7GaCUrtvNxppij4J4zd"
+				"bzz-raw://0d6b6fdef098e6911c66676dec5fe4fe69201ecbaf8594b1c0fd01aaf51616be",
+				"dweb:/ipfs/QmRQqGW8hXm46BkwXNDchBFAZZxrDSXmuBRdiL9K9oG63U"
 			]
 		}
 	},

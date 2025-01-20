@@ -152,7 +152,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"051ERC20.sol": "IERC20"
+			"076DiscreteStakingRewards.sol": "IERC20"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -166,12 +166,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"051ERC20.sol": {
-			"keccak256": "0xbece909a874cefc71f3d7c0f3bf421ac2c39e595887ff0ce8290b6b034b6a7b6",
+		"076DiscreteStakingRewards.sol": {
+			"keccak256": "0x26cfd5584427a7261d93a5c0c79db27bbaaeca834f6ae609e75f0fcd6a4175f3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e453e8a982996cc9c89902f05280882f53e64f78b86ed232b7f6988ebd51c28f",
-				"dweb:/ipfs/QmNxbjpJ999mxCUdUkDF5SLnwChxL1MudD8x2ayEvAEpdk"
+				"bzz-raw://b7049725ad4ecd9475e4b8390808c5c8459be1138447dd5ec87eb82ce077cd55",
+				"dweb:/ipfs/QmepzF8tY83UWizvg4x2yghz8LMGQJ8HJrwVZPBEsYU5Z7"
 			]
 		}
 	},
