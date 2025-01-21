@@ -1,0 +1,84 @@
+{
+	"id": "c746090d745aa6fe0b85cfb99b3e04db",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"082WrongWayToWriteAnUpgradeableProxy.sol": {
+				"content": "/*\n\n⼀、介绍 \n1. 课程⽬标：重现透明可升级代理，并探讨其错误实现。\n2. 视频系列内容：\n    ◦ 错误实现可升级代理合约\n    ◦ 分析错误实现中的问题\n    ◦ 返回回退函数中的数据， fallback 的数据\n    ◦ 在智能合约的存储槽中写⼊任意数据\n    ◦ 存储实现合约地址和管理员地址\n    ◦ 分离管理员和⽤⼾界⾯\n    ◦ 编写代理管理员合约\n    ◦ 实际操作演⽰\n\n⼆、错误实现可升级代理合约 \n1. 基础实现：\n    ◦ 创建初始合约  CounterV1 ，包含  count  状态变量和  increment  函数。 \n    ◦ 升级⾄  CounterV2 ，添加  decrement  函数。 \n    ◦ 编写代理合约  BuggyProxy ，初始设置为  CounterV1 ，之后升级为  CounterV2 。 \n2. 代理合约设计：\n    ◦ 存储实现合约地址和管理员地址。\n    ◦ 管理员能够升级实现合约。\n    ◦ 使⽤  delegatecall  转发请求⾄实现合约。 \n三、错误分析 \n    1. 存储布局不⼀致：\n        ◦ BuggyProxy  合约的存储布局与实现合约不⼀致，导致调⽤  increment  函数时修改了实现合约地址。\n    2. 回退函数⽆法返回数据：\n        ◦ 通过回退函数调⽤实现合约的  count  函数时，⽆法返回数据。 \n四、解决⽅案预告 \n    1. 对⻬存储布局：\n        ◦ 确保所有实现合约与代理合约的存储布局⼀致。\n    2. 改进回退函数：\n        ◦ 修改回退函数以便能够返回数据。\n\n编程作业 \n任务：实现⼀个简单的可升级代理合约，并解决上述错误。\n步骤：\n    1. 编写  CounterV1  合约，包含  count  状态变量和  increment  函数。 \n    2. 编写  CounterV2  合约，添加  decrement  函数。 \n    3. 编写代理合约  BuggyProxy ，初始设置为  CounterV1 。 \n    4. 使⽤  delegatecall  实现函数调⽤转发。 \n    5. 解决存储布局不⼀致的问题。\n    6. 修改回退函数，确保能够返回数据。\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> 082WrongWayToWriteAnUpgradeableProxy.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "082WrongWayToWriteAnUpgradeableProxy.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"\n--> 082WrongWayToWriteAnUpgradeableProxy.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "082WrongWayToWriteAnUpgradeableProxy.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"082WrongWayToWriteAnUpgradeableProxy.sol": {
+				"ast": {
+					"absolutePath": "082WrongWayToWriteAnUpgradeableProxy.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "2017:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+{
+	"id": "7cd34aff718f462da68ff82e67f6877a",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"081ThreeWaysToEncodeCalldata.sol": {
+				"content": "\n/*\n1. 课程简介\n    ⽬标：了解如何在Solidity中使⽤三种不同的⽅法编码数据，以便通过低级函数调⽤其他合约。 \n    • ⽅法：编码签名、编码选择器、编码调⽤。\n\n2.编码签名（encode with signature）\n    • 使⽤ABI.encodeWithSignature函数。 \n    • 输⼊：函数签名（字符串形式）和实际参数。\n    • ⽰例：调⽤transfer函数。 \n        ◦ 函数签名：)transfer(address,uint256)) \n        ◦ 实际参数：接收地址和⾦额。\n    • 优点：简单直接。\n    • 缺点：函数签名可以拼写错误，编译时不会报错。\n\n3. 编码选择器（encode with selector） \n    • 使⽤ABI.encodeWithSelector函数。 \n    • 输⼊：函数选择器和实际参数。\n    • ⽰例：调⽤transfer函数。 \n        ◦ 函数选择器：IERC20.transfer.selector \n        ◦ 实际参数：接收地址和⾦额。\n    • 优点：避免函数名拼写错误。\n    • 缺点：参数类型或数量错误时，编译仍通过。\n4. 编码调⽤（encode call） \n    • 使⽤ABI.encodeCall函数。 \n    • 输⼊：函数名和实际参数。\n    • ⽰例：调⽤transfer函数。 \n        ◦ 函数名：IERC20.transfer \n        ◦ 实际参数：接收地址和⾦额。\n    • 优点：严格检查函数名、参数类型和数量。\n    • 缺点：稍复杂但更安全。\n5. 实验：调⽤Token合约 \n    • 部署合约：ABI编码合约和Token合约。 \n    • 测试：通过调⽤test函数验证所有编码⽅法的结果⼀致性。 \n6. ⼩结 \n    • 三种编码数据的⽅法各有优劣：\n        ◦ encode with signature：可能拼写错误但编译通过。 \n        ◦ encode with selector：避免函数名错误，但参数错误仍编译通过。 \n        ◦ encode call：严格检查，确保函数名和参数正确。 \n编程作业 \n任务：实现⼀个合约，使⽤上述三种⽅法编码数据并调⽤⼀个⽰例Token合约的transfer函数。然后验\n证返回的数据是否⼀致。\n    步骤：\n    1. 创建⼀个新的Solidity合约，命名为 DataEncoder 。 \n    2. 实现三个函数：\n        ◦ encodeWithSignature(address to, uint256 amount)\n        ◦ encodeWithSelector(address to, uint256 amount)\n        ◦ encodeCall(address to, uint256 amount)\n    3. 每个函数使⽤不同的⽅法编码数据并返回编码后的数据。\n    4. 部署并调⽤这三个函数，验证返回的数据是否⼀致。\n\n\n\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> 081ThreeWaysToEncodeCalldata.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "081ThreeWaysToEncodeCalldata.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"\n--> 081ThreeWaysToEncodeCalldata.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "081ThreeWaysToEncodeCalldata.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"081ThreeWaysToEncodeCalldata.sol": {
+				"ast": {
+					"absolutePath": "081ThreeWaysToEncodeCalldata.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "2509:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

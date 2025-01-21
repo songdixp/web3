@@ -1,0 +1,84 @@
+{
+	"id": "656dced17b1e239ed4979540345003ad",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"082ReturnDataFrom FallBack.sol": {
+				"content": "\n\n/*\n1. 引⾔ \n    • 课程⽬标：学习如何在Fallback函数中返回数据。\n    • 回顾上⼀节内容：设置了⼀个有问题的代理合约及其实现合约Counter V1，但⽆法返回数据。 \n2. 问题描述 \n    • 代理合约⽆法获取计数数据的问题。\n    • 部署相关合约并验证问题存在。\n3. 代理合约的设置 \n    • 部署Buggy Proxy合约和Counter V1合约。 \n    • 配置代理合约的实现为Counter V1。 \n    • 验证设置是否成功。\n    • 调⽤Counter V1的增量函数（Inc）并检查计数器。 \n4. 修复Fallback函数 \n    • 修改Fallback函数使其能够返回数据。\n    • 使⽤delegatecall返回数据的机制。 \n    • 采⽤OpenZeppelin的透明可升级代理代码进⾏修改。\n5. 具体实现步骤 \n    • 详细讲解汇编代码：数据拷⻉和delegatecall调⽤。 \n    • 解释每⼀⾏汇编代码的作⽤。\n    • 处理delegatecall的输出结果。 \n6. 测试修复后的合约 \n    • 部署并测试修改后的Buggy Proxy合约。 \n    • 验证计数器功能是否正常⼯作。\n7.升级合约版本 \n    • 部署Counter V2合约并升级代理合约的实现。 \n    • 验证升级后合约的功能。\n8. 后续内容预告 \n    • 下⼀节课程内容预告：移除实现和管理员状态变量并将其存储在其他地⽅。\n\n编程作业 \n作业描述： 请编写⼀个透明可升级代理合约，实现以下功能： \n    1. 部署⼀个代理合约和两个版本的实现合约（Counter V1和Counter V2）。 \n    2. 在代理合约中实现能够返回数据的Fallback函数。\n    3. 使⽤汇编代码实现delegatecall并返回数据。 \n    4. 编写测试⽤例，验证从V1升级到V2的过程，以及各函数的正确性。 \n作业提⽰：\n    • 确保在代理合约的Fallback函数中使⽤汇编代码来处理delegatecall。 \n    • 测试⽤例应包括部署合约、调⽤增量和减量函数，以及验证数据返回。\n    • 注意在升级合约版本时，确保状态变量的正确性。\n\n\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> 082ReturnDataFrom FallBack.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "082ReturnDataFrom FallBack.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"\n--> 082ReturnDataFrom FallBack.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "082ReturnDataFrom FallBack.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"082ReturnDataFrom FallBack.sol": {
+				"ast": {
+					"absolutePath": "082ReturnDataFrom FallBack.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "2085:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

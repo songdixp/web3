@@ -1,0 +1,84 @@
+{
+	"id": "d9e33503bd0ffa485737ab453fb9ea8f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"079MostSignificantBitInAssembly.sol": {
+				"content": "\n\n/*\n⼀、课程⽬标\n    1. 了解最重要位（MSB）的概念及其在⼆进制表⽰中的位置\n    2. 学习如何使⽤汇编语⾔（Assembly）实现MSB函数\n    3. 理解使⽤汇编语⾔优化Solidity代码的优势\n\n⼆、课程内容\n    1. 概述最重要位（MSB）\n        ◦MSB函数的定义与⽤途\n        ◦⼆进制表⽰及MSB的位置⽰例\n        ◦⽰例：8的MSB位置\n    2. 将MSB函数转换为汇编语⾔\n        ◦为什么使⽤汇编语⾔优化代码?\n        ◦汇编语⾔的基本操作：⽐较、⼤于操作符、位移、赋值?\n\n3. 具体实现步骤\n    ◦初始化和注释掉原代码\n    ◦使⽤汇编语⾔实现简单部分\n\n    ▪⽰例：⽐较x是否⼤于或等于2\n    ▪使⽤汇编语⾔进⾏⽐较和赋值\n        ◦逐步实现复杂部分\n\n    ▪⽰例：⽐较x是否⼤于或等于4，右移x并更新MSB\n    ▪使⽤位运算符“或”替代加法运算\n        ◦完整代码⽰例：⽐较x是否⼤于或等于16和256，并更新MSB\n\n4. 部署和测试合约\n    ◦部署合约并调⽤MSB函数进⾏测试\n    ◦⽰例：调⽤MSB函数，测试输⼊0和最⼤值2^256-1\n    ◦⽐较使⽤汇编语⾔前后的Gas消耗\n    ▪⽰例：函数形式的Gas消耗vs汇编语⾔形式的Gas消耗\n\n三、编程作业\n    任务：实现⼀个最重要位（MSB）函数，并在Solidity合约中使⽤汇编语⾔优化其性能\n    要求：\n        1. 编写⼀个Solidity合约，包含⼀个计算整数最重要位的函数。\n        2. 使⽤汇编语⾔优化该函数，并⽐较优化前后的Gas消耗。\n        3. 在注释中详细说明每⼀步的实现思路和汇编代码的作⽤。\n\n\n\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> 079MostSignificantBitInAssembly.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "079MostSignificantBitInAssembly.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"\n--> 079MostSignificantBitInAssembly.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "079MostSignificantBitInAssembly.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"079MostSignificantBitInAssembly.sol": {
+				"ast": {
+					"absolutePath": "079MostSignificantBitInAssembly.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "1705:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+{
+	"id": "4951603fcc2d7773b566d2a1cd18110f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"085ProxyAdmin.sol": {
+				"content": "\n\n/*\n\n1. 回顾与背景 \n    • 之前的内容回顾：如何区分代理合约的管理员调⽤和普通⽤⼾调⽤。\n    • 本次课程⽬标：编写⼀个Proxy Admin合约，该合约将作为代理合约的管理员。 \n2. 问题描述 \n    • 当前问题：管理员调⽤代理合约中的admin或implementation函数时会冲突，因为这些函数在代理合约和实现合约中都存在。\n    • 解决⽅案：创建Proxy Admin合约，管理代理合约的调⽤权限。 \n3. 编写Proxy Admin合约 \n    • 定义合约和构造函数\n        ◦ 创建Proxy Admin合约并设置所有者（合约的部署者）。 \n    • onlyOwner修饰符 \n        ◦ 定义onlyOwner修饰符，确保只有所有者能执⾏某些函数。 \n    • changeProxyAdmin函数 \n        ◦ 定义函数changeProxyAdmin，改变代理合约的管理员。 \n    • upgrade函数 \n        ◦ 定义函数upgrade，升级代理合约中的实现合约。 \n4. 设置和调⽤函数 \n    • 更改管理员\n        ◦ 定义函数changeAdmin，更改代理合约的管理员。 \n    • 静态调⽤函数\n        ◦ 使⽤静态调⽤获取代理合约的管理员和实现合约地址（getProxyAdmin和 getProxyImplementation）。 \n5. 部署与测试 \n    • 部署合约\n        ◦ 部署CounterV1、CounterV2、Proxy和Proxy Admin合约。 \n    • 测试合约\n        ◦ 测试更改代理合约的管理员和实现合约地址。\n        ◦ 测试CounterV1和CounterV2的功能，实现升级。 \n6. 总结与练习 \n    • 总结本次课程内容。\n    • 练习：编写⼀个简单的代理合约并实现升级功能。\n\n编程作业 \n编写⼀个简单的代理合约，并实现如下功能：\n1. 定义⼀个合约 SimpleProxy ，包含⼀个管理员地址和⼀个实现合约地址。\n2. 定义函数 changeAdmin 和 upgradeImplementation ，实现更改管理员和升级实现合约的功能。\n3. 部署并测试合约，确保能够正确更改管理员和升级实现合约。\n\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> 085ProxyAdmin.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "085ProxyAdmin.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"\n--> 085ProxyAdmin.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "085ProxyAdmin.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"085ProxyAdmin.sol": {
+				"ast": {
+					"absolutePath": "085ProxyAdmin.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "2027:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

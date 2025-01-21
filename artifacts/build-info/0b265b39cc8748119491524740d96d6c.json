@@ -1,0 +1,68 @@
+{
+	"id": "0b265b39cc8748119491524740d96d6c",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"077UnCheckedMath.sol": {
+				"content": "\n\n// SPDX-License-Identifier: MIT\npragma solidity 0.8.23;\n\n/*\n了解Solidity 0.8中的溢出和下溢⾏为 \n学习如何使⽤ unchecked 块禁⽤溢出和下溢检查\n⽐较启⽤和禁⽤检查时的Gas费⽤\n\n1.溢出和下溢概述\n •Solidity 0.8中默认启⽤的溢出和下溢检查\n  •禁⽤这些检查可以节省Gas费⽤\n\n2.使⽤ unchecked 禁⽤溢出和下溢检查\n•⽰例：加法函数（add）\n ◦正常加法可能溢出，触发错误\n ◦使⽤ unchecked 块禁⽤溢出检查\n ◦⽐较禁⽤和启⽤检查的Gas费⽤\n•⽰例：减法函数（subtract）\n ◦正常减法可能下溢，触发错误\n ◦使⽤ unchecked 块禁⽤下溢检查\n ◦⽐较禁⽤和启⽤检查的Gas费⽤\n\n3.多⾏代码中的 unchecked 块\n•⽰例：计算两个数的⽴⽅和（sum of cubes）\n ◦在unchecked 块中执⾏多⾏代码\n ◦禁⽤溢出和下溢检查\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"077UnCheckedMath.sol": {
+				"ast": {
+					"absolutePath": "077UnCheckedMath.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.8",
+								".23"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "34:23:0"
+						}
+					],
+					"src": "34:858:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

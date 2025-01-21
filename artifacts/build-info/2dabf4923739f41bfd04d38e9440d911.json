@@ -1,0 +1,84 @@
+{
+	"id": "2dabf4923739f41bfd04d38e9440d911",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"080Input&OutputWithFallback.sol": {
+				"content": "\n/*\n1. 引⾔\n    ◦ 介绍Solidity 0.8的新特性\n    ◦ 与Solidity 0.7相⽐的变化\n2. 回退函数的新功能\n    ◦ 之前版本的限制：不能接受输⼊和返回输出\n    ◦ 现在的改进：可以接受 bytes 类型的输⼊并返回 bytes 类型的输出\n3. 回退函数的声明与实现\n    ◦ 声明回退函数\n    ◦ 定义输⼊参数和返回值\n    ◦ 调⽤⽬标合约的⽅法\n4. ⽰例代码讲解\n    ◦ 如何编写能接受输⼊和返回输出的回退函数\n    ◦ 使⽤ call ⽅法与⽬标合约交互\n5. 创建测试合约\n    ◦ ⽬标合约（计数器合约）的实现\n    ◦ 测试回退函数输⼊输出的合约\n6. 测试过程\n    ◦ 部署计数器合约\n    ◦ 部署回退输⼊输出合约\n    ◦ 部署测试合约\n    ◦ 调⽤测试合约验证功能\n7. 总结与注意事项\n    ◦ Solidity 0.8中回退函数的优势\n    ◦ 使⽤回退函数时的注意事项\n    \n编程作业：\n编写⼀个Solidity合约，包含以下功能：\n    1. 计数器合约\n        ◦ 声明⼀个 count 状态变量\n        ◦ 编写⼀个 inc 函数，每次调⽤时将 count 加1，并返回 count 的当前值\n    2. 回退输⼊输出合约\n        ◦ 编写⼀个回退函数，能够接受 bytes 类型的数据并返回 bytes 类型的数据\n        ◦ 回退函数内部调⽤计数器合约的 inc 函数，并返回调⽤结果\n    3. 测试合约\n        ◦ 编写⼀个测试函数，接受回退合约的地址和数据，调⽤回退函数，并返回结果\n        ◦ 编写⼀个辅助函数，⽣成调⽤计数器合约 inc 函数的数据\n\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> 080Input&OutputWithFallback.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "080Input&OutputWithFallback.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"\n--> 080Input&OutputWithFallback.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "080Input&OutputWithFallback.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"080Input&OutputWithFallback.sol": {
+				"ast": {
+					"absolutePath": "080Input&OutputWithFallback.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "1628:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

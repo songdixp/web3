@@ -1,0 +1,84 @@
+{
+	"id": "909b0b1227de77c252c109faedbbbb36",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"084Admin&UserInterface.sol": {
+				"content": "\n\n/*\n1. 概述 \n    • 介绍课程主题和学习⽬标\n    • 透明可升级代理模式的基本概念\n2. 存储实现地址和管理员地址 \n    • 在⾮零和⾮⾸槽存储实现地址和管理员地址的必要性\n    • 当前实现的问题分析\n3. ⽤⼾和管理员接⼝的分离 \n    • 通过代理合约执⾏管理员和⽤⼾的函数调⽤\n    • ⽰例演⽰：在实现合约中复制函数并部署合约\n4. 解决实现中的问题 \n    • 删除代理合约中的公共函数，改为私有函数\n    • 保留需要的公共函数，并仅在消息发送者是管理员时显⽰\n5. 实现管理员函数修饰符 \n    • 创建  ifAdmin  修饰符，确保只有管理员可以执⾏特定函数 \n    • 修改  fallback  和  receive  函数以调⽤内部的  _fallback  函数 \n6. 编译和部署修改后的合约 \n    • 部署代理合约和实现合约，并测试新功能\n    • 确认管理员和⾮管理员的不同调⽤结果\n7. 总结和展望 \n    • 总结代理合约的修改和新功能\n    • 展望下⼀部分内容：实现  ProxyAdmin  合约以允许管理员调⽤实现合约中的函数\n     \n简单编程作业 \n请根据所学内容，编写⼀个Solidity合约，实现以下功能： \n1. 定义⼀个透明可升级代理合约，包含以下函数：\n◦ 存储实现地址和管理员地址\n◦ 分离管理员和⽤⼾接⼝\n◦ 通过  ifAdmin  修饰符控制函数访问权限 \n2. 定义⼀个简单的实现合约，包含⼀个返回地址的函数。\n3. 编写测试脚本：\n◦ 部署代理合约和实现合约\n◦ 测试不同地址调⽤函数的结果（管理员和⾮管理员）\n\n*/ "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> 084Admin&UserInterface.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "084Admin&UserInterface.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"\n--> 084Admin&UserInterface.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.23;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "084Admin&UserInterface.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"084Admin&UserInterface.sol": {
+				"ast": {
+					"absolutePath": "084Admin&UserInterface.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "1677:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
